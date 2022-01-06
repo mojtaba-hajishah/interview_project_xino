@@ -1,0 +1,32 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.empty-list {
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-list > p {
+  font: normal normal normal 12px/14px Arial;
+  color: #3C3C3C;
+}
+
+.empty-list > button {
+  border-radius: 13px;
+  margin: 24px auto;
+  text-align: center;
+  font: normal normal normal 12px/14px Arial;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  cursor: pointer;
+  color: #4F5BD5;
+  background-color: #4F5BD51F;
+}

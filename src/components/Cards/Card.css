@@ -1,0 +1,212 @@
+.card {
+  width: 256px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 8px;
+}
+
+.card__button {
+  width: 232px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid #eaeaea;
+  position: absolute;
+  top: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.card__button:focus {
+  outline: none;
+  animation: highlight 0.5s ease-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes highlight {
+  0% {
+      background: #fff
+  }
+  50% {
+      background: #4F5BD51F
+  }
+  to {
+      background: #fff
+  }
+}
+
+.card__button--expanded {
+  top: -39px;
+}
+
+.card__button--active {
+  background-color: #4F5BD5;
+}
+
+.card__button__icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+  transition: inherit;
+}
+
+.card__button__icon--active {
+  fill: #fff;
+}
+
+.card__face {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  height: 133px;
+  z-index: 2;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__face__tags {
+  display: flex;
+}
+
+.card__face__tag {
+  border: 1px solid #CCD0DE;
+  border-radius: 13px;
+  color: #CCD0DE;
+}
+
+.card__face__tag > span {
+  display: block;
+  font: normal normal normal 11px/12px Arial;
+  margin: 6px 12px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.card__face__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #3C3C3C;
+}
+
+.card__face__label {
+  text-align: left;
+  font: normal normal normal 16px/18px Arial;
+}
+
+.card__face__number {
+  text-align: left;
+  font: normal normal bold 30px/34px Arial;
+}
+
+.card__content {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  height: 133px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease-out;
+}
+
+.card__content--expanded {
+  visibility: visible;
+  opacity: 1;
+  height: 340px;
+}
+
+.card__content__button {
+  border-radius: 13px;
+  margin: 24px auto;
+  text-align: center;
+  font: normal normal normal 12px/14px Arial;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.card__content__button--create {
+  color: #4F5BD5;
+  background-color: #4F5BD51F;
+}
+
+.card__content__button--remove {
+  color: #d54f56;
+  background-color: #d54f611f;
+}
+
+.card__content__date {
+  flex: 1;
+}
+
+.card__content__date__title {
+  text-align: center;
+  font: normal normal normal 12px/14px Arial;
+  color: #A6ACBA;
+  display: flex;
+  align-items: center;
+  padding: 0px 4px;
+}
+
+.card__content__date__title > span {
+  flex: 1;
+}
+
+.card__content__date__title::before, .card__content__date__title::after {
+  flex: 1;
+  content: "";
+  display: block;
+  height: 1px;
+  border-bottom: 1px dashed #A6ACBA; 
+}
+
+.card__content__date__picker {
+  text-align: center;
+  margin: 24px auto;
+}
+
+.card__content__date__picker > label {
+  font: normal normal normal 12px/14px Arial;
+  color: #3C3C3C;
+}
+
+.card__content__date__picker__dates {
+  margin: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__content__date__picker__dates > input {
+  text-align: center;
+  font: normal normal normal 14px/16px Arial;
+  color: #3C3C3C;
+  width: 80px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #707070;
+  outline: none;
+}
+
+.card__content__date__picker__dates > span {
+  text-align: center;
+  font: normal normal normal 12px/14px Arial;
+  color: #3C3C3C80;
+  margin: 0 16px;
+}
